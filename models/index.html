@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Supported Models — VRhino</title>
+    <title>Models — VRhino</title>
     <meta name="description" content="Explore the five exact video-generation and lip-sync model paths supported by VRhino v0.5.0-alpha.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Supported Models — VRhino">
-    <meta property="og:description" content="Five exact model paths supported by the VRhino Public Alpha.">
+    <meta property="og:title" content="Models — VRhino">
+    <meta property="og:description" content="Available text-to-video and lip-sync models for VRhino.">
     <meta property="og:url" content="https://pixelrhino-ai.github.io/models/">
     <link rel="canonical" href="https://pixelrhino-ai.github.io/models/">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="/assets/js/site.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -25,65 +26,76 @@
         </ul>
       </nav>
     </header>
+
     <main id="main-content">
-      <header class="page-hero">
-        <div class="shell">
-          <p class="eyebrow">Public Alpha · v0.5.0-alpha</p>
-          <h1>Supported models.</h1>
-          <p class="page-intro">Five qualified model paths across text-to-video generation and audio-driven lip synchronization. Support applies only to the exact identities shown.</p>
-        </div>
+      <header class="models-hero shell">
+        <p class="overline">VRhino v0.5.0-alpha</p>
+        <h1>Models</h1>
+        <p>Available models for VRhino. Support applies to the exact identities listed below.</p>
       </header>
-      <section class="section" aria-labelledby="text-video-heading">
-        <div class="shell">
-          <div class="category-block">
-            <h2 class="category-heading" id="text-video-heading"><span class="category-count" aria-hidden="true">3</span>TEXT TO VIDEO</h2>
-            <div class="model-list">
-              <article class="model-card">
-                <div><h3><a href="/models/ltx-video/">LTX Video</a></h3><span class="model-version">v0.9.1</span></div>
-                <p class="model-description">Text-to-video generation through the shared Native runtime.</p>
-                <div><p class="model-identity">vrhino/ltx-video-v0.9.1:1.1.0</p><p class="model-meta">Source-backed · LTX v0.9.1 license</p></div>
-                <a class="model-arrow" href="/models/ltx-video/" aria-label="View LTX Video details">View model →</a>
-              </article>
-              <article class="model-card">
-                <div><h3><a href="/models/wan2.1/">Wan2.1</a></h3><span class="model-version">T2V 1.3B</span></div>
-                <p class="model-description">Text-to-video generation using the qualified Wan2.1 1.3B path.</p>
-                <div><p class="model-identity">vrhino/wan2.1-t2v-1.3b:1.0.0</p><p class="model-meta">Source-backed · Apache-2.0</p></div>
-                <a class="model-arrow" href="/models/wan2.1/" aria-label="View Wan2.1 details">View model →</a>
-              </article>
-              <article class="model-card">
-                <div><h3><a href="/models/mochi/">Mochi</a></h3><span class="model-version">1 Preview</span></div>
-                <p class="model-description">Text-to-video generation using the qualified Mochi preview path.</p>
-                <div><p class="model-identity">vrhino/mochi-1-preview:1.0.0</p><p class="model-meta">Source-backed · Apache-2.0</p></div>
-                <a class="model-arrow" href="/models/mochi/" aria-label="View Mochi details">View model →</a>
-              </article>
-            </div>
+
+      <section class="models-directory shell" aria-label="Available models">
+        <div class="model-toolbar">
+          <div class="filter-group" role="group" aria-label="Filter models by category">
+            <button class="filter-button is-active" type="button" data-model-filter="ALL" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-model-filter="TEXT TO VIDEO" aria-pressed="false">Text to Video</button>
+            <button class="filter-button" type="button" data-model-filter="LIP SYNC" aria-pressed="false">Lip Sync</button>
           </div>
-          <div class="category-block">
-            <h2 class="category-heading"><span class="category-count" aria-hidden="true">2</span>LIP SYNC</h2>
-            <div class="model-list">
-              <article class="model-card">
-                <div><h3><a href="/models/musetalk/">MuseTalk</a></h3><span class="model-version">1.5</span></div>
-                <p class="model-description">Audio-driven lip synchronization from source video and driving audio.</p>
-                <div><p class="model-identity">vrhino/musetalk-v1.5:1.0.0</p><p class="model-meta">Mode C · CreativeML OpenRAIL-M</p></div>
-                <a class="model-arrow" href="/models/musetalk/" aria-label="View MuseTalk details">View model →</a>
-              </article>
-              <article class="model-card">
-                <div><h3><a href="/models/latentsync/">LatentSync</a></h3><span class="model-version">1.6</span></div>
-                <p class="model-description">Lip-sync diffusion from source video and driving audio.</p>
-                <div><p class="model-identity">vrhino/latentsync-1.6:1.0.0</p><p class="model-meta">Mode C · CreativeML Open RAIL++-M</p></div>
-                <a class="model-arrow" href="/models/latentsync/" aria-label="View LatentSync details">View model →</a>
-              </article>
+          <label class="search-field"><span class="sr-only">Search models</span><input type="search" placeholder="Search models" autocomplete="off" data-model-search></label>
+        </div>
+        <p class="model-results" aria-live="polite" data-model-results>5 models</p>
+
+        <div class="model-list" data-model-list data-source="/data/models.json">
+          <article class="model-entry" data-model-id="vrhino/ltx-video-v0.9.1:1.1.0" data-category="TEXT TO VIDEO">
+            <div class="model-entry-main">
+              <div class="model-title-line"><h2><a href="/models/ltx-video/">LTX Video</a></h2><span class="tag">Text to Video</span><span class="tag">Public</span></div>
+              <p>Text-to-video generation through the shared Native runtime.</p>
+              <code class="model-id">vrhino/ltx-video-v0.9.1:1.1.0</code>
             </div>
-          </div>
+            <div class="model-entry-side"><p>Source-backed · local acquisition and conversion</p><p class="model-terms">LTX-Video v0.9.1 model license · v0.5.0-alpha</p><a class="model-link" href="/models/ltx-video/">Details →</a></div>
+          </article>
+          <article class="model-entry" data-model-id="vrhino/wan2.1-t2v-1.3b:1.0.0" data-category="TEXT TO VIDEO">
+            <div class="model-entry-main">
+              <div class="model-title-line"><h2><a href="/models/wan2.1/">Wan2.1 T2V 1.3B</a></h2><span class="tag">Text to Video</span><span class="tag">Public</span></div>
+              <p>Text-to-video generation using the qualified Wan2.1 1.3B path.</p>
+              <code class="model-id">vrhino/wan2.1-t2v-1.3b:1.0.0</code>
+            </div>
+            <div class="model-entry-side"><p>Source-backed · local acquisition and conversion</p><p class="model-terms">Apache License 2.0 · v0.5.0-alpha</p><a class="model-link" href="/models/wan2.1/">Details →</a></div>
+          </article>
+          <article class="model-entry" data-model-id="vrhino/mochi-1-preview:1.0.0" data-category="TEXT TO VIDEO">
+            <div class="model-entry-main">
+              <div class="model-title-line"><h2><a href="/models/mochi/">Mochi 1 Preview</a></h2><span class="tag">Text to Video</span><span class="tag">Public</span></div>
+              <p>Text-to-video generation using the qualified Mochi preview path.</p>
+              <code class="model-id">vrhino/mochi-1-preview:1.0.0</code>
+            </div>
+            <div class="model-entry-side"><p>Source-backed · local acquisition and conversion</p><p class="model-terms">Apache License 2.0 · v0.5.0-alpha</p><a class="model-link" href="/models/mochi/">Details →</a></div>
+          </article>
+          <article class="model-entry" data-model-id="vrhino/musetalk-v1.5:1.0.0" data-category="LIP SYNC">
+            <div class="model-entry-main">
+              <div class="model-title-line"><h2><a href="/models/musetalk/">MuseTalk 1.5</a></h2><span class="tag">Lip Sync</span><span class="tag">Mode C</span></div>
+              <p>Audio-driven lip synchronization from source video and driving audio.</p>
+              <code class="model-id">vrhino/musetalk-v1.5:1.0.0</code>
+            </div>
+            <div class="model-entry-side"><p>Mode C · no hosted weights or converted VRMs</p><p class="model-terms">CreativeML OpenRAIL-M, MIT, Apache-2.0 · v0.5.0-alpha</p><a class="model-link" href="/models/musetalk/">Details →</a></div>
+          </article>
+          <article class="model-entry" data-model-id="vrhino/latentsync-1.6:1.0.0" data-category="LIP SYNC">
+            <div class="model-entry-main">
+              <div class="model-title-line"><h2><a href="/models/latentsync/">LatentSync 1.6</a></h2><span class="tag">Lip Sync</span><span class="tag">Mode C</span></div>
+              <p>Lip-sync diffusion from source video and driving audio.</p>
+              <code class="model-id">vrhino/latentsync-1.6:1.0.0</code>
+            </div>
+            <div class="model-entry-side"><p>Mode C · no hosted weights or converted VRMs</p><p class="model-terms">CreativeML Open RAIL++-M, MIT, Apache-2.0 · v0.5.0-alpha</p><a class="model-link" href="/models/latentsync/">Details →</a></div>
+          </article>
         </div>
-      </section>
-      <section class="section section-rule">
-        <div class="shell release-panel">
-          <div><p class="release-meta">Distribution boundary</p><h2>No model weights hosted here.</h2><p>VRhino acquires fixed upstream assets and converts them locally where required. Review each model’s authoritative terms before use.</p></div>
-          <a class="button button-secondary" href="https://github.com/pixelrhino-ai/vrhino/tree/4c1773b8f5300881dd2dc7cef0f7295a187a3596/docs/models">Read model notices ↗</a>
-        </div>
+        <p class="no-results" hidden data-model-empty>No models match this search.</p>
+
+        <aside class="boundary-note">
+          <strong>Distribution boundary</strong>
+          <p>No model weights or converted VRMs are hosted here. Users acquire upstream assets locally when applicable and remain responsible for the governing model terms.</p>
+        </aside>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="shell footer-grid">
         <div><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>VRhino</a><p class="footer-meta">© 2026 Pixel Rhino</p></div>
