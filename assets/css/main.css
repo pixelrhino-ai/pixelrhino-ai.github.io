@@ -145,7 +145,7 @@ pre {
   display: inline-flex;
   min-height: 2.75rem;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.45rem;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.025em;
@@ -153,21 +153,10 @@ pre {
 }
 
 .brand-mark {
-  position: relative;
-  width: 1.05rem;
-  height: 1.05rem;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-}
-
-.brand-mark::after {
-  position: absolute;
-  top: 0.16rem;
-  right: -0.28rem;
-  width: 0.5rem;
-  border-top: 1px solid currentColor;
-  transform: rotate(-16deg);
-  content: "";
+  width: 1.9rem;
+  height: 1.9rem;
+  flex: 0 0 auto;
+  background: url("/assets/img/logo.png") center / contain no-repeat;
 }
 
 .nav-links,
