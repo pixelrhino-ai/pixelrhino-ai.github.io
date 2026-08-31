@@ -100,6 +100,10 @@ pre {
   padding-inline: var(--page-pad);
 }
 
+.shell.narrow-shell {
+  width: min(100%, calc(46rem + 2 * var(--page-pad)));
+}
+
 .skip-link {
   position: fixed;
   z-index: 100;
@@ -209,20 +213,20 @@ pre {
 
 /* Homepage */
 .home-hero {
-  padding-block: clamp(2.75rem, 5vw, 4rem) 2.25rem;
+  padding-block: clamp(2.75rem, 5vw, 3.75rem) 2rem;
 }
 
 .home-hero h1 {
-  max-width: 15ch;
-  margin-bottom: 1.25rem;
-  font-size: clamp(3rem, 6vw, 4.75rem);
+  max-width: 16ch;
+  margin-bottom: 1rem;
+  font-size: clamp(2.75rem, 6vw, 3.85rem);
 }
 
 .hero-summary {
-  max-width: 44rem;
-  margin-bottom: 1.75rem;
+  max-width: 39rem;
+  margin-bottom: 1.4rem;
   color: var(--muted);
-  font-size: clamp(1rem, 1.7vw, 1.2rem);
+  font-size: clamp(0.98rem, 1.6vw, 1.08rem);
 }
 
 .button-row {
@@ -264,13 +268,13 @@ pre {
 .hero-command {
   position: relative;
   display: flex;
-  width: min(100%, 40rem);
-  min-height: 3rem;
+  width: min(100%, 38rem);
+  min-height: 2.75rem;
   align-items: center;
   gap: 0.65rem;
   overflow-x: auto;
-  margin-top: 1.6rem;
-  padding: 0.75rem 5rem 0.75rem 1rem;
+  margin-top: 1.25rem;
+  padding: 0.65rem 5rem 0.65rem 0.9rem;
   border: 1px solid var(--line);
   border-radius: 0.4rem;
   background: var(--surface);
@@ -285,8 +289,7 @@ pre {
 }
 
 .models-section {
-  padding-block: 2.5rem 4.5rem;
-  border-top: 1px solid var(--line);
+  padding-block: 1.75rem 3.75rem;
 }
 
 .section-header {
@@ -294,13 +297,13 @@ pre {
   align-items: end;
   justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .section-header h2,
 .compact-header h2 {
   margin-bottom: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.7rem, 4vw, 2.25rem);
 }
 
 .section-header > p {
@@ -313,19 +316,16 @@ pre {
   min-height: 2.75rem;
   color: var(--muted);
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .model-list {
-  border-top: 1px solid var(--line-strong);
+  border-top: 1px solid var(--line);
 }
 
 .model-entry {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(14rem, 19rem);
-  gap: clamp(2rem, 6vw, 5rem);
-  padding-block: 1.65rem;
+  padding-block: 1.35rem 1.45rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -337,14 +337,14 @@ pre {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.65rem;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
 }
 
 .model-title-line h2,
 .model-title-line h3 {
-  margin: 0 0.35rem 0 0;
-  font-size: 1.3rem;
+  margin: 0 0.25rem 0 0;
+  font-size: 1.12rem;
   letter-spacing: -0.03em;
 }
 
@@ -352,43 +352,48 @@ pre {
   text-decoration: none;
 }
 
+.model-title-line a::after {
+  margin-left: 0.3rem;
+  color: var(--faint);
+  content: "→";
+  font-weight: 400;
+}
+
 .tag,
 .label {
   display: inline-flex;
-  min-height: 1.55rem;
+  min-height: 1.35rem;
   align-items: center;
-  padding: 0.2rem 0.5rem;
+  padding: 0.14rem 0.42rem;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface);
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 0.64rem;
+  font-size: 0.6rem;
   letter-spacing: 0.04em;
   line-height: 1;
   text-transform: uppercase;
 }
 
-.model-entry-main > p,
-.model-entry-side p {
-  margin-bottom: 0.6rem;
+.model-entry-main > p {
+  margin-bottom: 0.45rem;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .model-id {
   color: var(--ink);
-  font-size: 0.76rem;
+  font-size: 0.73rem;
   overflow-wrap: anywhere;
 }
 
-.model-entry-side {
-  align-self: start;
-}
-
-.model-entry-side .model-terms {
+.model-entry-main > .model-meta {
+  margin: 0.45rem 0 0;
   color: var(--faint);
-  font-size: 0.78rem;
+  font-family: var(--mono);
+  font-size: 0.67rem;
+  line-height: 1.5;
 }
 
 .model-link {
@@ -402,7 +407,7 @@ pre {
 }
 
 .compact-section {
-  padding-block: 4.5rem;
+  padding-block: 3.5rem;
   border-top: 1px solid var(--line);
 }
 
@@ -523,32 +528,29 @@ pre {
 
 /* Models directory */
 .models-hero {
-  padding-block: clamp(3.5rem, 8vw, 6rem) 2.75rem;
+  padding-block: clamp(2.75rem, 6vw, 4rem) 1.75rem;
 }
 
 .models-hero h1 {
-  margin-bottom: 0.75rem;
-  font-size: clamp(3rem, 7vw, 5rem);
+  margin-bottom: 0.55rem;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
 }
 
 .models-hero > p:last-child {
   max-width: 38rem;
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
 .models-directory {
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 .model-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-block: 1rem;
-  border-block: 1px solid var(--line);
+  display: grid;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
 }
 
 .filter-group {
@@ -558,11 +560,11 @@ pre {
 }
 
 .filter-button {
-  min-height: 2.35rem;
-  padding: 0.45rem 0.75rem;
-  border: 1px solid transparent;
-  border-radius: 0.3rem;
-  background: transparent;
+  min-height: 2rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
   color: var(--muted);
   cursor: pointer;
   font-size: 0.82rem;
@@ -574,17 +576,17 @@ pre {
 }
 
 .filter-button.is-active {
-  border-color: var(--line-strong);
-  background: var(--surface);
-  color: var(--ink);
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .search-field input {
-  width: min(16rem, 34vw);
-  min-height: 2.45rem;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--line-strong);
-  border-radius: 0.3rem;
+  width: 100%;
+  min-height: 2.8rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
   background: var(--paper);
   color: var(--ink);
   font-size: 0.84rem;
@@ -596,7 +598,7 @@ pre {
 
 .model-results {
   margin: 0;
-  padding-block: 0.9rem;
+  padding-block: 0.35rem 0.8rem;
   color: var(--faint);
   font-family: var(--mono);
   font-size: 0.72rem;
@@ -609,10 +611,7 @@ pre {
 }
 
 .boundary-note {
-  display: grid;
-  grid-template-columns: 12rem 1fr;
-  gap: 2rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--line);
 }
@@ -628,7 +627,7 @@ pre {
   max-width: 42rem;
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
 }
 
 /* Model detail pages */
