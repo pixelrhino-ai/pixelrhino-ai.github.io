@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mochi 1 Preview — VRhino Models</title>
+    <meta name="description" content="Pull and run the exact Mochi 1 Preview model path supported by the VRhino Public Alpha.">
+    <meta property="og:type" content="website"><meta property="og:title" content="Mochi 1 Preview — VRhino Models"><meta property="og:description" content="The qualified Mochi text-to-video path for VRhino."><meta property="og:url" content="https://pixelrhino-ai.github.io/models/mochi/">
+    <link rel="canonical" href="https://pixelrhino-ai.github.io/models/mochi/">
+    <link rel="stylesheet" href="/assets/css/main.css"><script src="/assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="VRhino home"><span class="brand-mark" aria-hidden="true"></span>VRhino</a><ul class="nav-links"><li><a href="/models/" aria-current="page">Models</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino">Docs</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino">GitHub</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/releases">Releases</a></li></ul></nav></header>
+    <main id="main-content">
+      <header class="page-hero"><div class="shell"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/models/">Models</a> / Mochi</nav><p class="eyebrow">Text to video</p><h1>Mochi 1 Preview</h1><p class="page-intro">Text-to-video generation using the exact qualified Mochi preview package.</p><div class="detail-labels"><span class="label">Public supported</span><span class="label">Linux x86_64</span><span class="label">NVIDIA CUDA</span></div></div></header>
+      <div class="shell model-detail">
+        <aside class="detail-sidebar" aria-label="Model summary"><dl><dt>Model ID</dt><dd><code>vrhino/mochi-1-preview:1.0.0</code></dd><dt>Category</dt><dd>Text to video</dd><dt>Distribution</dt><dd>Source-backed local acquisition and conversion</dd><dt>Model terms</dt><dd>Apache License 2.0</dd><dt>VRhino release</dt><dd>v0.5.0-alpha</dd></dl></aside>
+        <article class="detail-content">
+          <section aria-labelledby="use-title"><h2 id="use-title">Pull and run</h2><p>Pull the exact package, then generate an MP4 from a text prompt.</p><div class="terminal" data-copy><div class="terminal-bar"><span>Terminal</span><span class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></span></div><pre><code>vrhino pull vrhino/mochi-1-preview:1.0.0
+
+vrhino run vrhino/mochi-1-preview:1.0.0 \
+  --prompt "a red panda runs through snow." \
+  --output mochi-output.mp4</code></pre></div></section>
+          <section aria-labelledby="distribution-title"><h2 id="distribution-title">Distribution and license</h2><p>The VRhino release contains no Mochi model weights or converted Mochi <code>.vrm</code> weights. The pull command obtains original artifacts from the fixed official <code>genmo/mochi-1-preview</code> revision; conversion and installation occur locally.</p><p>The fixed upstream model card declares Apache License 2.0. Review the authoritative model card and license before downloading, converting, or using the model.</p></section>
+          <section aria-labelledby="scope-title"><h2 id="scope-title">Qualification scope</h2><p>The qualified default preset is admitted only when VRhino’s planner sees at least 80 GiB of available device memory. This is the current support and admission threshold for that preset, not an empirically proven absolute minimum VRAM requirement.</p><p>Support applies only to this exact model package and default profile on Linux x86_64 with NVIDIA CUDA.</p></section>
+          <section aria-labelledby="resources-title"><h2 id="resources-title">Resources</h2><ul class="resource-links"><li><a href="https://huggingface.co/genmo/mochi-1-preview/tree/14be5fcea23095ed330cb214647916a451e38b6e">Fixed upstream source</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/blob/4c1773b8f5300881dd2dc7cef0f7295a187a3596/docs/models/mochi-1-preview.md">VRhino model docs</a></li><li><a href="https://huggingface.co/genmo/mochi-1-preview/blob/14be5fcea23095ed330cb214647916a451e38b6e/README.md">Model card and license</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/releases/tag/v0.5.0-alpha">VRhino v0.5.0-alpha</a></li></ul></section>
+          <section><a class="back-link" href="/models/">Back to Models</a></section>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>VRhino</a><p class="footer-meta">© 2026 Pixel Rhino</p></div><ul class="footer-links"><li><a href="/models/">Models</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino">GitHub</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/releases">Releases</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/blob/4c1773b8f5300881dd2dc7cef0f7295a187a3596/licenses/VRHINO-BINARY-LICENSE.txt">Licenses</a></li></ul></div></footer>
+  </body>
+</html>

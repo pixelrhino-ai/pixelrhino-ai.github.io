@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LTX Video v0.9.1 — VRhino Models</title>
+    <meta name="description" content="Pull and run the exact LTX Video v0.9.1 model path supported by the VRhino Public Alpha.">
+    <meta property="og:type" content="website"><meta property="og:title" content="LTX Video v0.9.1 — VRhino Models"><meta property="og:description" content="Text-to-video generation through the VRhino Native runtime."><meta property="og:url" content="https://pixelrhino-ai.github.io/models/ltx-video/">
+    <link rel="canonical" href="https://pixelrhino-ai.github.io/models/ltx-video/">
+    <link rel="stylesheet" href="/assets/css/main.css"><script src="/assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="VRhino home"><span class="brand-mark" aria-hidden="true"></span>VRhino</a><ul class="nav-links"><li><a href="/models/" aria-current="page">Models</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino">Docs</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino">GitHub</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/releases">Releases</a></li></ul></nav></header>
+    <main id="main-content">
+      <header class="page-hero"><div class="shell"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/models/">Models</a> / LTX Video</nav><p class="eyebrow">Text to video</p><h1>LTX Video v0.9.1</h1><p class="page-intro">Text-to-video generation from a prompt through the shared Native runtime.</p><div class="detail-labels"><span class="label">Public supported</span><span class="label">Linux x86_64</span><span class="label">NVIDIA CUDA</span></div></div></header>
+      <div class="shell model-detail">
+        <aside class="detail-sidebar" aria-label="Model summary"><dl><dt>Model ID</dt><dd><code>vrhino/ltx-video-v0.9.1:1.1.0</code></dd><dt>Category</dt><dd>Text to video</dd><dt>Distribution</dt><dd>Source-backed local acquisition and conversion</dd><dt>Model terms</dt><dd>LTX-Video v0.9.1 model license</dd><dt>VRhino release</dt><dd>v0.5.0-alpha</dd></dl></aside>
+        <article class="detail-content">
+          <section aria-labelledby="use-title"><h2 id="use-title">Pull and run</h2><p>Pull the exact package, then generate an MP4 from a text prompt.</p><div class="terminal" data-copy><div class="terminal-bar"><span>Terminal</span><span class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></span></div><pre><code>vrhino pull vrhino/ltx-video-v0.9.1:1.1.0
+
+vrhino run vrhino/ltx-video-v0.9.1:1.1.0 \
+  --prompt "a cat walking in snow" \
+  --output output.mp4</code></pre></div></section>
+          <section aria-labelledby="distribution-title"><h2 id="distribution-title">Distribution and license</h2><p>The VRhino release contains no LTX model weights or converted LTX <code>.vrm</code> weights. The pull command obtains original artifacts from the fixed <code>Lightricks/LTX-Video</code> revision; conversion and installation occur locally.</p><p>Review and comply with the version-specific upstream LTX v0.9.1 license. The VRhino binary license grants no model, training-data, input-content, output-content, or other upstream rights.</p></section>
+          <section aria-labelledby="scope-title"><h2 id="scope-title">Qualification scope</h2><p>Support is limited to this exact Public Alpha package path on the qualified Linux x86_64 NVIDIA CUDA platform. No performance figure or minimum VRAM requirement is asserted here.</p></section>
+          <section aria-labelledby="resources-title"><h2 id="resources-title">Resources</h2><ul class="resource-links"><li><a href="https://huggingface.co/Lightricks/LTX-Video/tree/8984fa25007f376c1a299016d0957a37a2f797bb">Fixed upstream source</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/blob/4c1773b8f5300881dd2dc7cef0f7295a187a3596/docs/models/ltx-video-v0.9.1.md">VRhino model docs</a></li><li><a href="https://huggingface.co/Lightricks/LTX-Video/blob/8984fa25007f376c1a299016d0957a37a2f797bb/ltx-video-2b-v0.9.1.license.txt">Upstream license</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/releases/tag/v0.5.0-alpha">VRhino v0.5.0-alpha</a></li></ul></section>
+          <section><a class="back-link" href="/models/">Back to Models</a></section>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>VRhino</a><p class="footer-meta">© 2026 Pixel Rhino</p></div><ul class="footer-links"><li><a href="/models/">Models</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino">GitHub</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/releases">Releases</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/blob/4c1773b8f5300881dd2dc7cef0f7295a187a3596/licenses/VRHINO-BINARY-LICENSE.txt">Licenses</a></li></ul></div></footer>
+  </body>
+</html>

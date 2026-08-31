@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MuseTalk 1.5 — VRhino Models</title>
+    <meta name="description" content="Run MuseTalk 1.5 lip synchronization from source video and driving audio with VRhino.">
+    <meta property="og:type" content="website"><meta property="og:title" content="MuseTalk 1.5 — VRhino Models"><meta property="og:description" content="Audio-driven lip synchronization through a bounded VRhino Native workflow."><meta property="og:url" content="https://pixelrhino-ai.github.io/models/musetalk/">
+    <link rel="canonical" href="https://pixelrhino-ai.github.io/models/musetalk/">
+    <link rel="stylesheet" href="/assets/css/main.css"><script src="/assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="VRhino home"><span class="brand-mark" aria-hidden="true"></span>VRhino</a><ul class="nav-links"><li><a href="/models/" aria-current="page">Models</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino">Docs</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino">GitHub</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/releases">Releases</a></li></ul></nav></header>
+    <main id="main-content">
+      <header class="page-hero"><div class="shell"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/models/">Models</a> / MuseTalk</nav><p class="eyebrow">Lip sync</p><h1>MuseTalk 1.5</h1><p class="page-intro">Audio-driven lip synchronization from a source video and driving audio through a bounded Native workflow.</p><div class="detail-labels"><span class="label">Mode C</span><span class="label">Public supported</span><span class="label">NVIDIA CUDA</span></div></div></header>
+      <div class="shell model-detail">
+        <aside class="detail-sidebar" aria-label="Model summary"><dl><dt>Model ID</dt><dd><code>vrhino/musetalk-v1.5:1.0.0</code></dd><dt>Category</dt><dd>Lip sync</dd><dt>Inputs</dt><dd>Video + driving audio</dd><dt>Distribution</dt><dd>Mode C · local upstream acquisition and conversion</dd><dt>Model terms</dt><dd>CreativeML OpenRAIL-M, MIT, Apache-2.0</dd><dt>VRhino release</dt><dd>v0.5.0-alpha</dd></dl></aside>
+        <article class="detail-content">
+          <section aria-labelledby="use-title"><h2 id="use-title">Pull and run</h2><p>Pull the exact Mode-C package, then provide a source video and driving audio.</p><div class="terminal" data-copy><div class="terminal-bar"><span>Terminal</span><span class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></span></div><pre><code>vrhino pull vrhino/musetalk-v1.5:1.0.0
+
+vrhino run vrhino/musetalk-v1.5:1.0.0 \
+  --video input.mp4 \
+  --audio driving.wav \
+  --output output.mp4</code></pre></div></section>
+          <section aria-labelledby="distribution-title"><h2 id="distribution-title">Mode-C distribution</h2><p>Pixel Rhino does not distribute or host original model checkpoints or converted <code>.vrm</code> model components. <code>vrhino pull</code> obtains exact assets from official upstream sources, verifies their fixed identities, converts them locally, and installs the immutable package. Conversion changes representation, not licensing.</p></section>
+          <section aria-labelledby="license-title"><h2 id="license-title">License and responsible use</h2><p>MuseTalk model use remains subject to CreativeML OpenRAIL-M use-based restrictions. Other components carry MIT and Apache-2.0 terms, as itemized in the authoritative third-party notices. Users are responsible for lawful and consented use of video, faces, images, and audio. No upstream endorsement is implied.</p></section>
+          <section aria-labelledby="scope-title"><h2 id="scope-title">Qualification scope</h2><p>The package was qualified on an NVIDIA GeForce RTX 4090 D with the CUDA backend. One full-sample qualification observed approximately 6.27 GiB peak internal device allocation; this is an observation, not a minimum VRAM requirement.</p></section>
+          <section aria-labelledby="resources-title"><h2 id="resources-title">Resources</h2><ul class="resource-links"><li><a href="https://huggingface.co/TMElyralab/MuseTalk/tree/3ef28bc5cff08c90ad8178a25f1b570cd800170f">Fixed upstream source</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/blob/4c1773b8f5300881dd2dc7cef0f7295a187a3596/docs/models/musetalk-v1.5.md">VRhino model docs</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/tree/4c1773b8f5300881dd2dc7cef0f7295a187a3596/registry/models/vrhino/musetalk-v1.5/1.0.0">Public registry entry</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/blob/4c1773b8f5300881dd2dc7cef0f7295a187a3596/licenses/models/musetalk-v1.5/THIRD_PARTY_NOTICES.txt">Model notices and terms</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/releases/tag/v0.5.0-alpha">VRhino v0.5.0-alpha</a></li></ul></section>
+          <section><a class="back-link" href="/models/">Back to Models</a></section>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>VRhino</a><p class="footer-meta">© 2026 Pixel Rhino</p></div><ul class="footer-links"><li><a href="/models/">Models</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino">GitHub</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/releases">Releases</a></li><li><a href="https://github.com/pixelrhino-ai/vrhino/blob/4c1773b8f5300881dd2dc7cef0f7295a187a3596/licenses/VRHINO-BINARY-LICENSE.txt">Licenses</a></li></ul></div></footer>
+  </body>
+</html>
